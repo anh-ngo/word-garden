@@ -66,29 +66,6 @@ for (let i = 0; i < 5; i++) {
   slashElement.addEventListener("mouseup", dragItemUp);
 }
 
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Delete") {
-    // Remove currently selected symbol or word
-    const selection = window.getSelection();
-    if (!selection.isCollapsed) {
-      selection.deleteFromDocument();
-    } else {
-      const cursorNode = selection.anchorNode;
-      if (cursorNode && cursorNode.parentElement.classList.contains("symbol")) {
-        cursorNode.parentElement.remove();
-      } else if (cursorNode && cursorNode.parentElement.classList.contains("word")) {
-        cursorNode.parentElement.remove();
-      }
-    }
-  }
-});
-
-document.getElementById("word").addEventListener("keypress", myFunction);
-
-function deleteWord() {
-  
-}
-
 // Set play button for full screen
 const playButton = document.getElementById("play-button");
 const topBar = document.getElementById("top-bar");
