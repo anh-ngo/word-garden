@@ -345,4 +345,9 @@ input[type="color"] {
     #wordInput{
         height: 38px;
     }
+
+    .word{
+        display: flex;
+        font-size: 17px;
+    }
 }
