@@ -281,6 +281,13 @@ input[type="color"] {
         font-size: 13px;
     }
 
+    body{
+        overflow: hidden;
+
+    }
+    .canvas{
+        max-height: 100vh;
+    }
     #top-bar{
         width: 100%;
         height: auto;
