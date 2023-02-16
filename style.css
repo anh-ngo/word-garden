@@ -39,7 +39,7 @@ button{
 
 .canvas {
     width: 100vw;
-    min-height: 100vh;
+    max-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
