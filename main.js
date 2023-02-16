@@ -17,11 +17,14 @@ function dragItemDown(e){
   isDragging = true;
 
   document.addEventListener("mousemove", handleMouseMove);
+  document.addEventListener("touchmove", handleMouseMove);
 }
 
 function dragItemUp(e){
   isDragging = false;
   document.removeEventListener("mousemove", handleMouseMove);
+  document.removeEventListener("touchmove", handleMouseMove);
+  
 }
 
 function dragItemMove(e){
@@ -41,6 +44,8 @@ addButton.addEventListener("click", () => {
   wordContainer.appendChild(wordElement);
   wordElement.addEventListener("mousedown", dragItemDown);
   wordElement.addEventListener("mouseup", dragItemUp);
+  wordElement.addEventListener("ontouchstart", dragItemDown);
+  wordElement.addEventListener("ontouchend", dragItemUp);
 
   wordInput.value = "";
 });
@@ -55,6 +60,8 @@ for (let i = 0; i < 5; i++) {
   wordContainer.appendChild(symbolElement);
   symbolElement.addEventListener("mousedown", dragItemDown);
   symbolElement.addEventListener("mouseup", dragItemUp);
+  wordElement.addEventListener("ontouchstart", dragItemDown);
+  wordElement.addEventListener("ontouchend", dragItemUp);
 
   const slashElement = document.createElement("div");
   slashElement.classList.add("slash");
@@ -64,6 +71,8 @@ for (let i = 0; i < 5; i++) {
   wordContainer.appendChild(slashElement);
   slashElement.addEventListener("mousedown", dragItemDown);
   slashElement.addEventListener("mouseup", dragItemUp);
+  wordElement.addEventListener("ontouchstart", dragItemDown);
+  wordElement.addEventListener("ontouchend", dragItemUp);
 }
 
 // Set play button for full screen
