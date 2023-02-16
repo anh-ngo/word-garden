@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title>Word Garden</title>
+</head>
+<body>
+  <div class="canvas" onmousemove="dragItemMove(event)">
+    <div id="top-bar">
+        <div class="type">
+            <input type="text" id="wordInput" placeholder="Type in your words...">
+            <button id="add-button">Plant</button>
+        </div>
+
+        <div class="info">
+            <h1 class="logo">Word Garden</h1>
+            <button id="instruction-button">?</button>
+            <div id="instruction-panel">
+                <div class="text-wrapper">
+                <p>*＊✿❀○❀✿＊*</p>
+                <p>Use this website as your garden to plant thoughts, dreams, feelings, secrets, poems, dialogues, or whatever.</p>
+                <ul>
+                <li>＊ Type in what you want to plant.</li>
+                <li>＊ Organize by dragging plants around.</li>
+                <li>＊ Cut the plants you don't like by pressing Delete key</li>
+                <li>＊ Decorate by changing colors of the field and plants.</li>
+                <li>＊ View in full screen by pressing Play button.</li>
+                </ul>
+                <p>*＊✿❀○❀✿＊*</p>
+                <p>Word Garden is designed and created by Anh Ngo, who finds collaging unfinished sentences and separate words a meditative form of journaling.</p>
+                <p>Fonts used: Syne and Syne Tactile (Google Fonts)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main content -->
+    <div id="wordContainer">
+    </div>
+
+    <div id="bottom-bar">
+        <label for="bgcolor">Field color:</label>
+        <input type="color" id="bgcolor" value="#FFFFFF">
+        <label for="wordcolor">Plants color:</label>
+        <input type="color" id="wordcolor">
+    </div>
+  </div>
+  <div class="press-play">
+    <button id="play-button">Play</button>
+  </div>
+</body>
+<script src="main.js"></script>
+</html>
