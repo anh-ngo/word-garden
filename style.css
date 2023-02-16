@@ -39,7 +39,7 @@ button{
 
 .canvas {
     width: 100vw;
-    max-height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -97,6 +97,8 @@ button{
 #wordContainer {
     display: flex;
     flex-wrap: wrap;
+    width: 80%;
+    height: 80%;
     overflow: scroll;
 }
 
