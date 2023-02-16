@@ -283,11 +283,13 @@ input[type="color"] {
 
     body{
         overflow: hidden;
-
+        touch-action: none;
     }
+
     .canvas{
         max-height: 100vh;
     }
+
     #top-bar{
         width: 100%;
         height: auto;
