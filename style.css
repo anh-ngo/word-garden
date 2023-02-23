@@ -282,12 +282,13 @@ input[type="color"] {
     }
 
     body{
-        overflow: hidden;
+        /* overflow: hidden; */
         touch-action: none;
     }
 
     .canvas{
         max-height: 100vh;
+        position: fixed;
     }
 
     #top-bar{
@@ -305,6 +306,7 @@ input[type="color"] {
         bottom: var(--gap);
         display: flex;
         flex-direction: column;
+        margin-bottom: 0;
     }
 
     .type{
@@ -318,7 +320,7 @@ input[type="color"] {
 
     .info{
         width: 90%;
-        margin: var(--gap) var(--gap) 0 var(--gap);
+        margin-top: var(--gap);
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -334,6 +336,7 @@ input[type="color"] {
 
     #wordContainer{
         max-width: 80vw;
+        max-height: 80vh;
     }
 
     #instruction-panel{
